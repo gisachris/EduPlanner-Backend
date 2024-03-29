@@ -1,7 +1,7 @@
 databases:
-  - name: edu_planner
-    databaseName: edu_planner_production_database
-    user: edu_planner_production_user
+  - name: eduplanner_database
+    databaseName:
+    user: eduplanner_database_user
 
 services:
   - type: web
@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: edu_planner_production_database
+          name: eduplanner_database
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
